@@ -38,7 +38,7 @@ Amex:
     debit: 'Amount'
   negative_debit: False
   rules: 'expenses_catagories.csv'
-  PNC:
+PNC:
   match: 'Balance'
   hdr:
     date: 'Transaction Date'

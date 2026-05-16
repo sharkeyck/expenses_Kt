@@ -170,7 +170,7 @@ class TxnPrinter:
         if isinstance(debit, str):
             if debit.strip() == "":
                 return False
-            debit = debit.replace('$','')
+            debit = debit.replace('$','').replace(' ','')
             debit = float(debit)
         if self.total_idx and debit > 0: # Splitting logic; only if we paid
             debit = float(row[self.total_idx]) - debit
@@ -318,7 +318,7 @@ if __name__ == "__main__":
 
     # Interval a little bit before and after the month duration, to account for overlap
     interval_end = dateparser.parse(args.end).astimezone(tz) + datetime.timedelta(days=2)
-    interval_start = dateparser.parse(args.start).astimezone(tz) - datetime.timedelta(days=30 + 7)
+    interval_start = dateparser.parse(args.start).astimezone(tz) - datetime.timedelta(days=7)
 
     log.info(f"Printing transactions from {interval_start} to {interval_end}, excluding any already listed in {args.prev}")
 
