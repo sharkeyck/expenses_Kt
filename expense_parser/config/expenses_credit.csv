@@ -1,32 +1,16 @@
 # Format: [category|desc] [actualcategorynamenospaces|OMIT] [regexp]
-desc      Recurring   LA FITNESS
-desc      Food        GIANT-EAGLE.*
-desc      Merch       STEAM PURCHASE.*
-desc      Food        TRADER JOE'S.*
-desc      Food        WHOLEFDS.*
-desc      Food        [Tt][Jj].*
-desc      Merch       GOOGLE.*
-desc      Travel      Car Rental
-desc      Merch       JLCPCB*
-desc      Food        LOTUS FOOD COMPANY
-desc      Food        .*ROBERT WHOLEY.*
-desc      Food        PENNSYLVANIA MACARONI
-desc      Food        .*MARKET OUTLET.*
-desc      Food        HUEL
-desc      Food        .*Webstaurant.*
-desc      Recurring   .*Google Fi.*
-category  Merch       Merchandise
-category  Food        Dining
-category  Recurring   Phone/Cable
-category  Travel      Gas/Automotive 
-category  Recurring   Insurance 
-category  Recurring   Professional Services 
-category  Recurring   Fee/Interest Charge
-category  Recurring   Health Care
-category  Recurring   Healthcare
-category  Merch       Other Services
-category  Merch       Electronics
-category  Travel      Lodging|Airfare
-category  Recurring   Internet
-category  Travel      Other Travel
+desc      Groceries       GIANT-EAGLE.*
+desc      Other           STEAM PURCHASE.*
+desc      Groceries       TRADER JOE'S.*
+desc      Groceries       WHOLEFDS.*
+desc      Groceries       [Tt][Jj].*
+desc      Groceries       LOTUS FOOD COMPANY
+desc      Groceries       .*ROBERT WHOLEY.*
+desc      Groceries       PENNSYLVANIA MACARONI
+desc      Gas/Automotive  GOMOBILEPGH.*
+category  Restaurants     Dining
+category  Utilities       Phone/Cable
+category  Groceries       Grocery
+category  Health          Healthcare
+category  Health          Health Care
 category  OMIT        Payment/Credit
