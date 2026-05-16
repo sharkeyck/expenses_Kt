@@ -2,19 +2,23 @@
 desc      Groceries       GIANT-EAGLE.*
 desc      Other           STEAM PURCHASE.*
 desc      Groceries       TRADER JOE.*
-desc      Groceries       WHOLEFDS.*
+desc      Groceries       WHOLEFDS.*credit
 desc      Groceries       [Tt][Jj].*
 desc      Groceries       LOTUS FOOD COMPANY
 desc      Groceries       .*ROBERT WHOLEY.*
 desc      Groceries       PENNSYLVANIA MACARONI
 desc      Gas/Automotive  GOMOBILEPGH.*
 desc      Hobbies         .*PROTOHAVEN.*
-desc      Groceries         .*VITAMIN SHOPPE.*
-desc      Groceries         .*EAST END FOOD CO-OP.*
+desc      Groceries       .*VITAMIN SHOPPE.*
+desc      Groceries       .*EAST END FOOD CO-OP.*
 category  Restaurants     Dining
 category  Utilities       Phone/Cable
+category  Utilities       Phone
 category  Groceries       Grocery
 category  Health          Healthcare
 category  Health          Health Care
-category  OMIT        Payment/Credit
-desc      OMIT        ONLINE PAYMENT - THANK YOU
+category  OMIT            Payment/Credit
+desc      OMIT            ONLINE PAYMENT - THANK YOU
+category  OMIT            Paychecks
+category  OMIT            Credit Card Payments
+
