@@ -170,6 +170,7 @@ class TxnPrinter:
         if isinstance(debit, str):
             if debit.strip() == "":
                 return False
+            debit = debit.replace('$','')
             debit = float(debit)
         if self.total_idx and debit > 0: # Splitting logic; only if we paid
             debit = float(row[self.total_idx]) - debit
