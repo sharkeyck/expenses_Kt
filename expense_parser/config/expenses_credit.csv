@@ -1,16 +1,20 @@
 # Format: [category|desc] [actualcategorynamenospaces|OMIT] [regexp]
 desc      Groceries       GIANT-EAGLE.*
 desc      Other           STEAM PURCHASE.*
-desc      Groceries       TRADER JOE'S.*
+desc      Groceries       TRADER JOE.*
 desc      Groceries       WHOLEFDS.*
 desc      Groceries       [Tt][Jj].*
 desc      Groceries       LOTUS FOOD COMPANY
 desc      Groceries       .*ROBERT WHOLEY.*
 desc      Groceries       PENNSYLVANIA MACARONI
 desc      Gas/Automotive  GOMOBILEPGH.*
+desc      Hobbies         .*PROTOHAVEN.*
+desc      Groceries         .*VITAMIN SHOPPE.*
+desc      Groceries         .*EAST END FOOD CO-OP.*
 category  Restaurants     Dining
 category  Utilities       Phone/Cable
 category  Groceries       Grocery
 category  Health          Healthcare
 category  Health          Health Care
 category  OMIT        Payment/Credit
+desc      OMIT        ONLINE PAYMENT - THANK YOU
