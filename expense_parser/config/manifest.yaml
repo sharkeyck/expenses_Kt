@@ -7,7 +7,7 @@ Spliit:
     debit: 'Katie' 
     total: 'Cost' # Debit and cost are used to compute actual line item
   negative_debit: True
-  rules: 'expenses_credit.csv'
+  rules: 'expenses_catagories.csv'
 Splitwise:
   match: 'Katie'
   hdr:
@@ -16,7 +16,7 @@ Splitwise:
     category: 'Category'
     debit: 'Katie'
   negative_debit: True
-  rules: 'expenses_splitwise.csv'
+  rules: 'expenses_catagories.csv'
 CapitalOne:
   match: 'Card No'
   hdr:
@@ -25,7 +25,7 @@ CapitalOne:
     category: 'Category'
     debit: 'Debit'
   negative_debit: False
-  rules: 'expenses_credit.csv'
+  rules: 'expenses_catagories.csv'
 Splitwise Empty: 
   match: 'You have no '
   pass: True
@@ -37,4 +37,13 @@ Amex:
     category: ''
     debit: 'Amount'
   negative_debit: False
-  rules: 'expenses_credit.csv'
+  rules: 'expenses_catagories.csv'
+  PNC:
+  match: 'Balance'
+  hdr:
+    date: 'Transaction Date'
+    desc: 'Transaction Description'
+    category: 'Category'
+    debit: 'Amount'
+  negative_debit: True
+  rules: 'expenses_catagories.csv'
