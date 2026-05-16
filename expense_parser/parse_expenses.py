@@ -299,6 +299,8 @@ def parse_expenses(prev, paths, interval_start, interval_end, ai_categorizer=Non
 if __name__ == "__main__":
     ap = argparse.ArgumentParser(description="Parse credit card and other statements to produced an organized transaction list")
     ap.add_argument("--prev", type=str, required=True, help="Path to previous output file, for deduplication")
+    ap.add_argument("--start", type=str, required=True, help="Start date of transactions to be parsed")
+    ap.add_argument("--end", type=str, required=True, help="End date of transactions to be parsed")
     ap.add_argument('--paths', nargs='+', type=str, required=True, help='File paths to read')
     ap.add_argument('--disable-ai', action='store_true', help='Disable AI categorization')
     args = ap.parse_args(sys.argv[1:])
@@ -314,11 +316,8 @@ if __name__ == "__main__":
         log.info("AI categorization disabled")
 
     # Interval a little bit before and after the month duration, to account for overlap
-    interval_end = datetime.datetime.now().replace(hour=0, minute=0, second=0, microsecond=0).astimezone(tz)
-    while interval_end.day != 27:
-        interval_end -= datetime.timedelta(days=1)
-    interval_end += datetime.timedelta(days=3)
-    interval_start = interval_end - datetime.timedelta(days=30 + 7)
+    interval_end = dateparser.parse(args.end).astimezone(tz) + datetime.timedelta(days=2)
+    interval_start = dateparser.parse(args.start).astimezone(tz) - datetime.timedelta(days=30 + 7)
 
     log.info(f"Printing transactions from {interval_start} to {interval_end}, excluding any already listed in {args.prev}")
 
